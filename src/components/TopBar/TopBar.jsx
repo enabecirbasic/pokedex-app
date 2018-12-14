@@ -5,7 +5,7 @@ import './TopBar.css';
 const TopBar = () => {
   return (
     <div className='top_bar'>
-      <Link to="/">Pokedex</Link>
+      <Link to="/">Pokédex</Link>
     </div>
   );
 };

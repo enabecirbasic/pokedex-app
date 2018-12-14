@@ -1,0 +1,7 @@
+.input_wrapper {
+  height: 100px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
