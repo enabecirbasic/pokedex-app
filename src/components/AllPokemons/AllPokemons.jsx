@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Table, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 import Loader from '../Loader';
+import { Link } from "react-router-dom";
 import './AllPokemons.css'
-
 
 class AllPokemons extends Component {
   constructor(props) {
@@ -50,19 +50,13 @@ class AllPokemons extends Component {
       return (
         <React.Fragment>
           <div className="input_wrapper">
-            <Input type="text" name="name" id="pokemon" placeholder="Search for..." onChange={this.onChange}/>
+            <Input type="text" name="name" id="pokemon" placeholder="Search for..." onChange={this.onChange} />
           </div>
-          <Table>
-            <tbody>
-              {pokemons
-              .filter(item => this.state.input === '' || item.name.includes(this.state.input))
-              .map(item => (
-                <tr key={item.name}>
-                  <td>{item.name.toUpperCase()}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
+          {pokemons
+            .filter(item => this.state.input === '' || item.name.includes(this.state.input))
+            .map(item => (
+              <div className="pokemon_link" key={item.name}><Link to={`${item.name}`} >{item.name.toUpperCase()}</Link></div>
+            ))}
         </React.Fragment>
       );
     }

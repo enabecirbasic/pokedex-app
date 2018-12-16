@@ -5,3 +5,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.pokemon_link {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+  font-size: 16px;
+}
+
+.pokemon_link a:link, .pokemon_link a:visited {
+  color:black;
+}

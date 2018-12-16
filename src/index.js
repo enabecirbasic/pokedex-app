@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AllPokemons from './components/AllPokemons';
-import Layout from './layout/Layout';
+import SinglePokemon from './components/SinglePokemon';
+import Layout from './layout';
 
 const App = () => (
   <Router>
-    <Layout><Route path="/" exact component={AllPokemons} /></Layout>
+    <Layout><Route path="/" exact component={AllPokemons} />
+    <Route path="/:pokemonName" component={SinglePokemon} /></Layout>
 
     {/* <Route path="/about/" component={About} /> */}
   </Router>
