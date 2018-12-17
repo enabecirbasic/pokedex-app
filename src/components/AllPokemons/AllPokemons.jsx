@@ -54,8 +54,8 @@ class AllPokemons extends Component {
           </div>
           {pokemons
             .filter(item => this.state.input === '' || item.name.includes(this.state.input))
-            .map(item => (
-              <div className="pokemon_link" key={item.name}><Link to={`${item.name}`} >{item.name.toUpperCase()}</Link></div>
+            .map((item, index) => (
+              <div className="pokemon_link" key={item.name}><Link to={`${item.name}`} ><span>{index+1}</span> {item.name.toUpperCase()}</Link></div>
             ))}
         </React.Fragment>
       );

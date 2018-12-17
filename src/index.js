@@ -9,10 +9,10 @@ import Layout from './layout';
 
 const App = () => (
   <Router>
-    <Layout><Route path="/" exact component={AllPokemons} />
-    <Route path="/:pokemonName" component={SinglePokemon} /></Layout>
-
-    {/* <Route path="/about/" component={About} /> */}
+    <Layout>
+      <Route path="/" exact component={AllPokemons} />
+      <Route path="/:pokemonName" component={SinglePokemon} />
+    </Layout>
   </Router>
 );
 
