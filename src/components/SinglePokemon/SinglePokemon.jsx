@@ -103,6 +103,8 @@ class SinglePokemon extends Component {
                 })}
               </ul>
             </div>
+
+            <hr className="divider"/>
         </React.Fragment>
       );
     }
