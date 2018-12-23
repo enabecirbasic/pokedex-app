@@ -36,7 +36,7 @@ class AllPokemons extends Component {
 
   onChange = (e) => {
     this.setState({
-      input: e.target.value.toLowerCase()
+      input: e.target.value
     })
   }
 
@@ -53,7 +53,7 @@ class AllPokemons extends Component {
             <Input type="text" name="name" id="pokemon" placeholder="Search for..." onChange={this.onChange} />
           </div>
           {pokemons
-            .filter(item => this.state.input === '' || item.name.includes(this.state.input))
+            .filter(item => this.state.input === '' || item.name.includes(this.state.input.toLowerCase()))
             .map((item, index) => (
               <div className="pokemon_link" key={item.name}><Link to={`${item.name}`} ><span>{index+1}</span> {item.name.toUpperCase()}</Link></div>
             ))}
