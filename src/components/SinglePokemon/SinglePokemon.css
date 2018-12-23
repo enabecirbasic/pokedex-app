@@ -23,10 +23,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
-.info_item_title{
+.info_title{
   font-size: 12px;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -34,10 +33,22 @@
   color: #999999;
 }
 
-.info_item_content{
+.info_content{
   font-weight: bold;
 }
 
-.info_item_content div{
+.info_content div{
   text-align: center;
+}
+
+.divider {
+  margin: 40px 0;
+}
+
+.info_wrapper {
+  padding: 0 30px;
+}
+
+.content_item {
+  text-align: left !important;
 }

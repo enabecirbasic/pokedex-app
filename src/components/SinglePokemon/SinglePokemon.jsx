@@ -47,8 +47,8 @@ class SinglePokemon extends Component {
           </div>
           <div className="basic_info_wrapper">
             <div className="info_item">
-              <div className="info_item_title">type</div>
-              <div className="info_item_content">
+              <div className="info_title">type</div>
+              <div className="info_content">
                 {pokemon.types.map((item, index) => {
                   return <div key={index}>{item.type.name.toUpperCase()}</div>;
                 })}
@@ -56,21 +56,53 @@ class SinglePokemon extends Component {
             </div>
 
             <div className="info_item">
-              <div className="info_item_title">height</div>
-              <div className="info_item_content">{pokemon.height}</div>
+              <div className="info_title">height</div>
+              <div className="info_content">{pokemon.height}</div>
             </div>
 
             <div className="info_item">
-              <div className="info_item_title">experience</div>
-              <div className="info_item_content">{pokemon.base_experience}</div>
+              <div className="info_title">experience</div>
+              <div className="info_content">{pokemon.base_experience}</div>
             </div>
 
             <div className="info_item">
-              <div className="info_item_title">weight</div>
-              <div className="info_item_content">{pokemon.weight}</div>
+              <div className="info_title">weight</div>
+              <div className="info_content">{pokemon.weight}</div>
             </div>
 
           </div>
+        
+
+          <hr className="divider"/>
+
+          <div className="info_wrapper">
+              <div className="info_title">abilities:</div>
+              <ul className="info_content">
+                {pokemon.abilities.map((item, index) => {
+                  return <li key={index}>{item.ability.name.toUpperCase()}</li>;
+                })}
+              </ul>
+            </div>
+            <hr className="divider"/>
+
+            <div className="info_wrapper">
+              <div className="info_title">stats:</div> 
+              <div className="info_content">
+                {pokemon.stats.map((item, index) => {
+                  return <div className="content_item" key={index}>{item.stat.name.toUpperCase()}: {item.base_stat}</div>;
+                })}
+              </div>
+            </div>
+            <hr className="divider"/>
+
+            <div className="info_wrapper">
+              <div className="info_title">moves:</div>
+              <ul className="info_content">
+                {pokemon.moves.map((item, index) => {
+                  return <li key={index}>{item.move.name.toUpperCase()}</li>;
+                })}
+              </ul>
+            </div>
         </React.Fragment>
       );
     }
